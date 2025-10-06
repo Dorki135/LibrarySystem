@@ -1,0 +1,33 @@
+﻿namespace LibrarySystem
+{
+    using System;
+    using System.Collections.Generic;
+    public static class Program
+    {
+        public static void Main(string[] args)
+        {
+            Library library = new Library();
+            Book book1 = new Book("1984", "George Orwell");
+            Book book2 = new Book("To Kill a Mockingbird", "Harper Lee");
+            Reader reader1 = new Reader("Alice");
+            Reader reader2 = new Reader("Bob");
+            library.AddBook(book1);
+            library.AddBook(book2);
+            library.RegisterReader(reader1);
+            library.RegisterReader(reader2);
+            Console.WriteLine("Library setup complete.");
+            reader1.BorrowBook(book1, library);
+            reader2.BorrowBook(book2, library);
+            reader1.listBooks();
+            reader2.listBooks();
+            reader2.ReturnBook(book2);
+            reader1.ReturnBook(book1);
+            library.AddBook(new Book("The Great Gatsby", "F. Scott Fitzgerald"));
+            library.RegisterReader(new Reader("Charlie"));
+            library.books.ForEach(b => b.Str());
+            Console.WriteLine("Library operations complete.");
+
+        }
+
+    }
+}

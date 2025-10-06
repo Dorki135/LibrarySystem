@@ -1,0 +1,13 @@
+bin/
+obj/
+.vs/
+.vscode/
+*.user
+*.suo
+packages/
+*.nupkg
+*.dll
+*.exe
+*.pdb
+*.log
+.DS_Store
