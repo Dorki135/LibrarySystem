@@ -27,7 +27,7 @@ namespace LibrarySystem
             }
             else
             {
-                Console.WriteLine($"You did not borrow '{book.Str()}'.");
+                Console.WriteLine($"{name} did not borrow '{book.Str()}'./n");
             }
         }
         // Method to list all borrowed books
@@ -38,6 +38,7 @@ namespace LibrarySystem
             {
                 Console.WriteLine(book.Str());
             }
+            System.Console.WriteLine("");
         }
     }
 }

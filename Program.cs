@@ -15,11 +15,14 @@
             library.AddBook(book2);
             library.RegisterReader(reader1);
             library.RegisterReader(reader2);
-            Console.WriteLine("Library setup complete.");
+            Console.WriteLine("Library setup complete.\n");
             reader1.BorrowBook(book1, library);
             reader2.BorrowBook(book2, library);
             reader1.listBooks();
             reader2.listBooks();
+            library.SearchBookByTitle("1984");
+            library.SearchBookByTitle("Harry Potter");
+            library.SearchReaderByName("Alice");
             reader2.ReturnBook(book2);
             reader1.ReturnBook(book1);
             library.AddBook(new Book("The Great Gatsby", "F. Scott Fitzgerald"));

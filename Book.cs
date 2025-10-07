@@ -5,7 +5,7 @@ namespace LibrarySystem
     {
         private string title;
         private string author;
-        private bool isBorrowed;
+        public bool isBorrowed;
         public Book(string title, string author)
         {
             this.title = title;
@@ -20,18 +20,18 @@ namespace LibrarySystem
                 if (!this.isBorrowed)
                 {
                     this.isBorrowed = true;
-                    Console.WriteLine($"{reader.name} have borrowed '{this.title}' by {this.author}.");
+                    Console.WriteLine($"{reader.name} have borrowed '{this.title}' by {this.author}.\n");
                     return true;
                 }
                 else
                 {
-                    Console.WriteLine($"Sorry {reader.name}, '{this.title}' is already borrowed.");
+                    Console.WriteLine($"Sorry {reader.name}, '{this.title}' is already borrowed.\n");
                     return false;
                 }
             }
             else
             {
-                Console.WriteLine($"{reader.name}'s Error: The book '{this.title}' is not found in this library.");
+                Console.WriteLine($"{reader.name}'s Error: The book '{this.title}' is not found in this library\n");
                 return false;
             }
         }
@@ -41,11 +41,11 @@ namespace LibrarySystem
             if (this.isBorrowed)
             {
                 this.isBorrowed = false;
-                Console.WriteLine($"{reader.name} have returned '{this.title}'.");
+                Console.WriteLine($"{reader.name} have returned '{this.title}'.\n");
             }
             else
             {
-                Console.WriteLine($"'Sorry {reader.name},{this.title}' was not borrowed.");
+                Console.WriteLine($"'Sorry {reader.name},{this.title}' was not borrowed.\n");
             }
         }
 
