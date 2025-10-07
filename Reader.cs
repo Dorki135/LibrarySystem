@@ -12,6 +12,11 @@ namespace LibrarySystem
         // Method for the reader to borrow a book
         public void BorrowBook(Book book, Library library)
         {
+            if (borrowedBooks.Count >= 3)
+            {
+                Console.WriteLine($"{name} cannot borrow more than 3 books at a time.\n");
+                return;
+            }
             if (book.Borrow(library, this))
             {
                 borrowedBooks.Add(book);

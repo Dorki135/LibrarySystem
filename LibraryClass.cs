@@ -58,5 +58,18 @@ namespace LibrarySystem
             }
             Console.WriteLine($"Reader with name '{name}' not found.\n");
         }
+        //methid to list all the available books in the library
+        public void ListAvailableBooks()
+        {
+            Console.WriteLine("Available books in the library:");
+            foreach (Book book in books)
+            {
+                if (!book.isBorrowed)
+                {
+                    Console.WriteLine(book.Str());
+                }
+            }
+            Console.WriteLine("");
+        }
     }
 }

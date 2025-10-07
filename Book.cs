@@ -3,8 +3,8 @@ namespace LibrarySystem
     using System;
     public class Book
     {
-        private string title;
-        private string author;
+        protected string title;
+        protected string author;
         public bool isBorrowed;
         public Book(string title, string author)
         {
@@ -50,7 +50,7 @@ namespace LibrarySystem
         }
 
         //  Method to get book details
-        public string Str()
+        public virtual string Str()
         {
             return $"Title:{this.title}, Author:{this.author}";
         }
