@@ -8,8 +8,8 @@ The **LibrarySystem** project is a basic library management system written in C#
 
 ## Key Features
 
-- Add books and authors, manage availability
-- Borrow and return books for users
+- Add books, digital books and authors, manage availability
+- Borrow and return books for users, download and remove digital books
 - Basic testing and running via `dotnet`
 
 > If your implementation differs, update this guide accordingly. This structure fits most C# library projects.
